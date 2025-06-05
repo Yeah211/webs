@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Horario</title>
+    <meta charset="utf-8">
+    <style>
+
+        body {
+    
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+               nav ul {
+        list-style: none; 
+        text-align: center;
+        border-top: 1px solid black; border-bottom: 1px solid black; padding: 10px 0;
+    }
+        nav ul li {
+        display: inline; /* 가로로바꿈 */            
+        text-transform: uppercase; /* 전부 대문자 */ 
+        padding: 0 40px; letter-spacing: 10px; /* 글자사이 간격 */ 
+    }
+        nav ul li a {text-decoration:none; color: black;font-size: 23px;}
+ 
+        nav ul li a:hover {text-decoration:dashed;} 
+        #main {
+            padding: 70px;
+        }
+            header { 
+        background-color: #ffffff; 
+        padding: 10px 0;
+        text-align: center;
+    
+        }
+        header h1 {text-align: left; margin-left: 100px; font-size: 42px; font-weight: bold; text-transform: uppercase;}
+
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            margin-left: 250px;
+            margin-bottom: 30px;
+            background-color: white;
+
+        }
+
+        th, td {
+            border: 1px solid black;
+            text-transform: uppercase;
+            padding: 10px;
+            text-align: center;
+            height: 50px; /* ✅ 행 높이 추가 */
+}
+
+        th {
+            background-color: black;
+            color: white;
+        }
+
+        button {
+             margin-right: 20px;
+             margin-left: 10px;
+             padding: 8px 16px;
+             cursor: pointer;
+             
+               }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+
+        section ul { 
+            text-align: center;
+            font-size: 1.5rem;
+            list-style: none;    
+             /* 리스트 앞의 점 제거 */
+            padding-left: 0;
+
+
+        }
+        section h2 {
+             text-align: center;
+            font-size: 1.8rem;
+
+        }
+    </style>
+</head>
+
+<body>
+     <header>
+        <h1>Schillerschule</h1>
+        <nav>
+            <ul>
+                <li><a href="Schule.html">instituto</a></li>
+                <li><a href="mihorario.html">Horario</a></li>
+                <li><a href="vergleichen.html">información</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>                      
+        <h2>Horario de clases</h2>
+        <ul>
+           <li>Las clases empiezan a las <strong>7:45 de la mañana</strong>.</li>
+           <li>Una clase dura <strong>90 minutos</strong>.</li>
+         <li>Después de la clase, hay <strong>30 minutos de recreo</strong>.</li>
+         </ul>
+        </section>
+        <br>
+        <section>
+             <h2>Hora del almuerzo</h2>
+             <ul>
+             <li>De lunes a viernes, comemos a la <strong>1:15 de la tarde</strong>.</li>
+             <li>El miércoles, comemos a las <strong>12:30</strong>.</li>
+            </ul>
+        </section>
+        
+            <div style="text-align: center; margin-top: 50px;">
+            <h1 style="margin: 0 auto;">Ejemplo:</h1>
+
+            <br>
+            <br>
+
+            <button onclick="showTable('table1')" style="margin: 0 10px; padding: 8px 16px;">Semana A</button>
+            <button onclick="showTable('table2')" style="margin: 0 10px; padding: 8px 16px;">Semana B</button>
+            </div>
+
+
+        <!-- ✅ 새로 12줄, 가로 5칸 표 -->
+        <section class="schedule">
+            <table id="table1">
+                <thead>
+                    <tr>
+                        <th style="width: 50px;"></th>
+                        <th>Lunes</th>
+                        <th>martes</th>
+                        <th>miércoles</th>
+                        <th>jueves</th>
+                        <th>viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 12줄 반복 -->
+                    <tr><td>1</td><td>Química</td><td>Historia</td><td>Matemáticas</td><td></td><td>Ciencias Sociales / Política</td></tr>
+                    <tr><td>2</td><td>Química</td><td>Historia</td><td>Matemáticas</td><td></td><td>Ciencias Sociales / Política</td></tr>
+                    <tr><td>3</td><td>Matemáticas</td><td>Matemáticas</td><td>Alemán</td><td>Ética</td><td>Dibujo</td></tr>
+                    <tr><td>4</td><td>Matemáticas</td><td>Matemáticas</td><td>Alemán</td><td>Ética</td><td>Dibujo</td></tr>
+                    <tr><td>5</td><td>Inglés</td><td></td><td>tut</td><td>Biología</td><td>Inglés</td></tr>
+                    <tr><td>6</td><td>Inglés</td><td></td><td></td><td>Biología</td><td>Inglés</td></tr>
+                    <tr><td>7</td><td></td><td></td><td>Informática</td><td></td><td></td></tr>
+                    <tr><td>8</td><td>Informática</td><td></td><td>Informática</td><td>Alemán</td><td>Español</td></tr>
+                    <tr><td>9</td><td>Informática</td><td></td><td>Biología</td><td>Alemán</td><td>Español</td></tr>
+                    <tr><td>10</td><td></td><td></td><td>Biología</td><td>Español</td><td>Educación Física</td></tr>
+                    <tr><td>11</td><td></td><td></td><td></td><td>Español</td><td>Educación Física</td></tr>
+                    <tr><td>12</td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+
+            <table id="table2">
+                <thead>
+                    <tr>
+                        <th style="width: 50px;"></th>
+                        <th>Lunes</th>
+                        <th>martes</th>
+                        <th>miércoles</th>
+                        <th>jueves</th>
+                        <th>viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 12줄 반복 -->
+                    <tr><td>1</td><td>Química</td><td>Historia</td><td>Matemáticas</td><td></td><td>Ciencias Sociales / Política</td></tr>
+                    <tr><td>2</td><td>Química</td><td>Historia</td><td>Matemáticas</td><td></td><td>Ciencias Sociales / Política</td></tr>
+                    <tr><td>3</td><td>Matemáticas</td><td></td><td>Alemán</td><td>Ética</td><td>Dibujo</td></tr>
+                    <tr><td>4</td><td>Matemáticas</td><td></td><td>Alemán</td><td>Ética</td><td>Dibujo</td></tr>
+                    <tr><td>5</td><td>Inglés</td><td></td><td>tut</td><td>Biología</td><td></td></tr>
+                    <tr><td>6</td><td>Inglés</td><td></td><td></td><td>Biología</td><td></td></tr>
+                    <tr><td>7</td><td></td><td></td><td>Química</td><td></td><td></td></tr>
+                    <tr><td>8</td><td>Informática</td><td></td><td>Química</td><td></td><td>Español</td></tr>
+                    <tr><td>9</td><td>Informática</td><td></td><td></td><td></td><td>Español</td></tr>
+                    <tr><td>10</td><td></td><td></td><td></td><td>Español</td><td>Educación Física</td></tr>
+                    <tr><td>11</td><td></td><td></td><td></td><td>Español</td><td>Educación Física</td></tr>
+                    <tr><td>12</td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Schillerschule. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+         function showTable(id) {
+            // 모든 테이블 숨기기
+             document.querySelectorAll('table').forEach(table => {
+                  table.style.display = 'none';
+            });  // 클릭한 버튼에 해당하는 테이블만 보이기
+             document.getElementById(id).style.display = 'table'; }
+
+              // 페이지 로드 시 표 1을 기본으로 보여주기
+      showTable('table1');
+</script>
+</body>
+</html>
